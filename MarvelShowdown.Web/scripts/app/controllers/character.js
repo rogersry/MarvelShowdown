@@ -9,7 +9,7 @@
  */
 
 
-(function(){
+(function character_iife(){
   
   var app = angular.module("marvelShowdownApp");
   

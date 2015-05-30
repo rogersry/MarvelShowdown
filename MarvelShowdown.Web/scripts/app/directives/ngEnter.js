@@ -1,5 +1,7 @@
-(function iife(){
-	var app = angular.module("marvelShowdownApp");
+(function ngEnter_iife() {
+
+    var app = angular.module("marvelShowdownApp");
+
 	app.directive('ngEnter', function() {
 		return function(scope, element, attrs) {
 			element.bind("keydown keypress", function(event) {

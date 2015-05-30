@@ -8,6 +8,10 @@
  *
  * Main module of the application.
  */
+
+(function app_iife() {
+
+
 angular
   .module('marvelShowdownApp', [
     'ngRoute'
@@ -34,3 +38,6 @@ angular
         redirectTo: '/search'
       });
   });
+
+
+}());

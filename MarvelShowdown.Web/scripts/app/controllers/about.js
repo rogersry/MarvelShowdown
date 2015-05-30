@@ -7,11 +7,12 @@
  * # AboutCtrl
  * Controller of the marvelShowdownApp
  */
+
+(function about_iife() {
+
 angular.module('marvelShowdownApp')
   .controller('AboutController', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    // Nothing here yet.
   });
+
+}());

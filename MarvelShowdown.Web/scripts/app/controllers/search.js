@@ -9,7 +9,7 @@
  */
 
 
-(function() {
+(function search_iife() {
 
   var app = angular.module("marvelShowdownApp");
 

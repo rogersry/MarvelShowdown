@@ -1,4 +1,4 @@
-(function(){
+(function marvelAPI_iife(){
   
   var marvelApi = function($http)
   {

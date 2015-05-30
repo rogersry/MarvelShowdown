@@ -8,7 +8,7 @@
  * Controller of the marvelShowdownApp
  */
 
-(function() {
+(function comic_iife() {
 
     var app = angular.module("marvelShowdownApp");
 
