@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body ng-app="marvelShowdownApp">
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">Marvel Showdown</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse"  ng-controller="HeaderController">
+
+            <ul class="nav navbar-nav">
+              <li ng-class="{ active: (isActive('/search') || isActive('/character') || isActive('/comic'))}"><a href="#/search">Search</a></li>
+              <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-copyright-mark"></span> 2015 rcubedfilms.com</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+      
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/directives/ngEnter.js"></script>
+    <script src="Scripts/app/controllers/header.js"></script>
+    <script src="Scripts/app/controllers/search.js"></script>
+    <script src="Scripts/app/controllers/character.js"></script>
+    <script src="Scripts/app/controllers/comic.js"></script>
+    <script src="Scripts/app/services/marvelApi.js"></script>
+    <script src="Scripts/app/controllers/about.js"></script>
+</body>
+</html>

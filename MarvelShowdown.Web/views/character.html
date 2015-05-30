@@ -1,0 +1,26 @@
+<div>{{error}}</div>
+
+<div class="jumbotron">
+  <div class="media">
+    <div class="media-left">
+      <img class="media-object img-rounded" src="{{character.thumbnail.path}}/portrait_fantastic.{{character.thumbnail.extension}}" alt="{{character.name}}" />
+
+    </div>
+    <div class="media-body">
+      <h2 class="media-heading">{{ character.name }}</h2>
+      <h3>
+      {{ character.description }}
+      </h3>
+    </div>
+  </div>
+
+</div>
+
+<h4>Comics</h4>
+<div ng-show="loading" style="width:70%; margin:0 auto;">
+      
+      <h5><img id="imgLoader" src="images/loading2.gif" alt="loading" width="10%" height="10%" />  <small>loading...</small></h5>
+    </div>
+<div ng-hide="loading" class="list-group">
+    <a class="list-group-item" href="#/comic/{{comic.id}}" ng-repeat="comic in comics">{{comic.title}}</a>
+</div>

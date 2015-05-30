@@ -1,0 +1,17 @@
+﻿<div>{{error}}</div>
+
+<div class="jumbotron">
+  <div class="media">
+    <div class="media-left">
+      <img class="media-object img-rounded" src="{{comic.thumbnail.path}}/portrait_incredible.{{comic.thumbnail.extension}}" alt="{{comic.title}}" />
+    </div>
+    <div class="media-body">
+      <h2 class="media-heading">{{ comic.title }}</h2>
+	  <h4 ng-repeat="creator in comic.creators.items">{{creator.name}}</h4>
+      <h3>
+      {{ comic.description }}
+      </h3>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,50 @@
+<div class="row marketing">
+    <div>
+        <div class="well"><p>Welcome!  This site is a way for me to experiment with Angular.js and other web technologies.  At this time, you can search for Marvel characters and see a short list of their comics.</p>
+        </div>
+        <div>{{ error }}</div>
+        <div class="input-group search-character">
+            <input type="text" class="form-control" placeholder="Search Character Name" ng-model="characterName" ng-enter="searchCharacter()" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="searchCharacter()">Search</button>
+            </span>
+        </div>
+        <br />
+        <div>
+            <div ng-show="loading" style="width:70%; margin:0 auto;">
+                <h5>
+                    <img id="imgLoader" src="images/loading2.gif" alt="loading" width="10%" height="10%" />
+                    <small>loading...</small>
+                </h5>
+            </div>
+            <div class="row" ng-hide="loading">
+                <div class="col-xs-4" ng-repeat="character in characters">
+                    <div class="panel panel-default character-panel" ng-click="selectCharacter(character.id)">
+                        <div class="character-panel-heading panel-heading">
+                            <div class="panel-title character-title text-uppercase" title="{{character.name}}">{{character.name}}</div> <div class="character-check-icon glyphicon glyphicon-ok-circle"></div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-left">
+                                    
+                                        <img src="{{character.thumbnail.path || 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/' }}/portrait_small.{{character.thumbnail.extension || 'jpg'}}" alt="{{character.name}}" />
+                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="row">
+                                        <div class="col-md-6 character-subcategory">Comics {{character.comics.available}}</div>
+                                        <div class="col-md-6">Stories {{character.stories.available}}</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">Events {{character.events.available}}</div>
+                                        <div class="col-md-6">Series {{character.series.available}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
